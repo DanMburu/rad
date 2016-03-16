@@ -473,7 +473,7 @@ input[disabled="disabled"], select[disabled="disabled"], textarea[disabled="disa
 .ui-popup-content .error{color: darkred}
 .row {
 	clear: both;
-	width: 107%;
+
 }
 .no-gutter > [class*='col-'] {
 	padding-right:0;
