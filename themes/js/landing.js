@@ -4,11 +4,11 @@ var dbCreated = false;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    alert('ready');
+
     db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);
     var firstrun = window.localStorage.getItem("runned");
 
-    alert(firstrun);
+
     if (firstrun === null ) {
         setTimeout(function(){hideLoader(); }, 2000);
         $('#landing').fadeIn();
@@ -21,23 +21,16 @@ function onDeviceReady() {
 
 
 function GetUserDetails(){
-    alert('getting user details');
+
     db.transaction(function(transaction) {
         transaction.executeSql("select * from fd_users", [],
             function(tx, result) { // On Success
                 var len = result.rows.length;
-                alert('success');
-                alert(len);
-                for (var i=0; i<len; i++) {
-                    alert(row.AccountType);
-                    var row = result.rows.item(i);
+                    var row = result.rows.item(0);
                     if(row.AccountType==1){
                        window.location="doctor.html";
                     }else{
                         window.location="client.html";
-                    }
-
-
                 }// End for
             },
             function(error){ // On error

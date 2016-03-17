@@ -11,7 +11,7 @@ function onDeviceReady() {
     var firstrun = window.localStorage.getItem("runned");
 
     //  firstrun = null;
-     alert(firstrun);
+   //  alert(firstrun);
     if (firstrun == null) {
         setTimeout(function () {
             $('.lnklogin').click();
@@ -22,7 +22,7 @@ function onDeviceReady() {
         setTimeout(function () {
             $('#lnklanding').click();
         }, 2000);
-        alert('Getting user details');
+
         GetUserDetails();
     }
 
@@ -101,23 +101,23 @@ function populateDB(data) {
 
 
 function GetUserDetails() {
-    alert('down');
+
     db.transaction(function (transaction) {
         transaction.executeSql("SELECT * FROM fd_users", [],
             function (tx, result) { // On Success
                 var len = result.rows.length;
-                alert(len);
-                for (var i = 0; i < len; i++) {
-                    var row = result.rows.item(i);
-                    $('#USERID').val(row.UserId);
-                    setTimeout(function () {
-                        startChat();
 
-                    }, 1000);
 
-                    //	alert(row.subscriber_id);
+                var row = result.rows.item(0);
+                $('#USERID').val(row.UserId);
+                $.mobile.changePage( '#landing', {
+                    type: "get",
+                    transition: "flip"
+                });
+                setTimeout(function () {
+                    startChat();
 
-                }// End for
+                }, 1000);
             },
             function (error) { // On error
                 var err=JSON.stringify(error, null, 4);
@@ -194,8 +194,6 @@ function notificationAppointment(title, msg) {
     });
 } //Close notification
 
-
-
 function SetLocationNotification() {
     if ($('#HFLatitude').val() === "") {
         $('body').find('.bottom-notification').remove();
@@ -212,3 +210,19 @@ function RemoveLocationNotification() {
     $('.ui-footer').hide();
 }
 
+
+$(document).on("pageshow", function() { // login
+
+    $('.lnkLogout').off('click').on("click", function (e) {
+
+        $.mobile.changePage( '#login', {
+            type: "get",
+            transition: "flip"
+        });
+
+        setTimeout(function() {
+            window.localStorage.setItem("firstrun", null);
+        }, 2000);
+
+    });
+});
