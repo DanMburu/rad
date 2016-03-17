@@ -1,9 +1,11 @@
+var db;
+var dbCreated = false;
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-// alert('ready');
+    alert('ready');
     db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);
-
     var firstrun = window.localStorage.getItem("runned");
     //  firstrun = null;
    // alert(firstrun);
