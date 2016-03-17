@@ -106,6 +106,7 @@ function GetUserDetails() {
         transaction.executeSql("SELECT * FROM fd_users", [],
             function (tx, result) { // On Success
                 var len = result.rows.length;
+                alert(len);
                 for (var i = 0; i < len; i++) {
                     var row = result.rows.item(i);
                     $('#USERID').val(row.UserId);

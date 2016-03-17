@@ -26,6 +26,8 @@ function GetUserDetails(){
         transaction.executeSql("select * from fd_users", [],
             function(tx, result) { // On Success
                 var len = result.rows.length;
+                alert('success');
+                alert(len);
                 for (var i=0; i<len; i++) {
                     alert(row.AccountType);
                     var row = result.rows.item(i);
