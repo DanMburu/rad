@@ -22,6 +22,7 @@ function onDeviceReady() {
         setTimeout(function () {
             $('#lnklanding').click();
         }, 2000);
+        alert('Getting user details');
         GetUserDetails();
     }
 
@@ -74,7 +75,7 @@ function onError2(error) {
 
 function populateDB(data) {
 
-// alert('populateDB');
+ alert('populateDB');
 //Create Table
     db.transaction(
         function (tx) {
@@ -89,12 +90,12 @@ function populateDB(data) {
                 "AccountType VARCHAR(200), " +
                 "UserId INTEGER(20))";
             tx.executeSql(sql);
-
+       alert('Table created');
 
         },
         function (error) {
             console.log(error);
-            alert('An error has occured. Please try again and check your internet connection');
+            alert('An error has occured.'+error);
         }
     );
 
@@ -144,7 +145,8 @@ function SaveUserDetails(data, accountType) {
         },
         function (error) {
             console.log(error);
-            alert(error + 'An error has occured. Please try again and check your internet connection');
+            var err=JSON.stringify(error, null, 4);
+            alert(err + 'An error has occured. Please try again and check your internet connection');
         }
     );
 }

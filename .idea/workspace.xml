@@ -40,13 +40,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-7.1923075">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="24" />
+              <caret line="544" column="48" selection-start-line="544" selection-start-column="47" selection-end-line="544" selection-end-column="48" />
               <folding>
-                <marker date="1458208360951" expanded="true" signature="2627:2649" placeholder="SELECT * FRO..fd_users..." />
+                <element signature="e#286#1146#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5320285">
+              <caret line="91" column="31" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
+              <folding>
+                <marker date="1458210939862" expanded="true" signature="2648:2670" placeholder="SELECT * FRO..fd_users..." />
               </folding>
             </state>
           </provider>
@@ -102,19 +114,19 @@
         <entry file="file://$PROJECT_DIR$/themes/js/client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-7.1923075">
-              <caret line="453" column="52" selection-start-line="453" selection-start-column="47" selection-end-line="453" selection-end-column="52" />
+              <caret line="351" column="48" selection-start-line="351" selection-start-column="8" selection-end-line="351" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56049824">
-              <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+            <state vertical-scroll-proportion="-10.884615">
+              <caret line="53" column="36" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="36" />
               <folding>
-                <element signature="e#2259#2561#0" expanded="false" />
+                <element signature="e#2238#2540#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -156,8 +168,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/client.html" />
         <option value="$PROJECT_DIR$/doctor.html" />
-        <option value="$PROJECT_DIR$/themes/js/mobile.js" />
         <option value="$PROJECT_DIR$/themes/js/common.js" />
+        <option value="$PROJECT_DIR$/themes/js/mobile.js" />
       </list>
     </option>
   </component>
@@ -494,8 +506,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
           <folding>
-            <element signature="e#680#2216#0" expanded="false" />
-            <element signature="e#2259#2561#0" expanded="false" />
+            <element signature="e#680#2195#0" expanded="false" />
+            <element signature="e#2238#2540#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -546,8 +558,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <element signature="e#680#2216#0" expanded="false" />
-            <element signature="e#2259#2561#0" expanded="false" />
+            <element signature="e#680#2195#0" expanded="false" />
+            <element signature="e#2238#2540#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -605,8 +617,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <element signature="e#680#2216#0" expanded="false" />
-            <element signature="e#2259#2561#0" expanded="false" />
+            <element signature="e#680#2195#0" expanded="false" />
+            <element signature="e#2238#2540#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -657,8 +669,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <element signature="e#680#2216#0" expanded="false" />
-            <element signature="e#2259#2561#0" expanded="false" />
+            <element signature="e#680#2195#0" expanded="false" />
+            <element signature="e#2238#2540#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -709,8 +721,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#680#2216#0" expanded="false" />
-            <element signature="e#2259#2561#0" expanded="false" />
+            <element signature="e#680#2195#0" expanded="false" />
+            <element signature="e#2238#2540#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,16 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="54" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="539" column="10" selection-start-line="539" selection-start-column="10" selection-end-line="539" selection-end-column="10" />
-          <folding>
-            <element signature="e#286#1146#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,6 +837,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.884615">
+          <caret line="53" column="36" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="36" />
+          <folding>
+            <element signature="e#2238#2540#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.26">
@@ -851,12 +863,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
+    <entry file="file://$PROJECT_DIR$/themes/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.1923075">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="24" />
+          <caret line="544" column="48" selection-start-line="544" selection-start-column="47" selection-end-line="544" selection-end-column="48" />
           <folding>
-            <marker date="1458208360951" expanded="true" signature="2627:2649" placeholder="SELECT * FRO..fd_users..." />
+            <element signature="e#286#1146#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -864,17 +876,17 @@
     <entry file="file://$PROJECT_DIR$/themes/js/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.1923075">
-          <caret line="453" column="52" selection-start-line="453" selection-start-column="47" selection-end-line="453" selection-end-column="52" />
+          <caret line="351" column="48" selection-start-line="351" selection-start-column="8" selection-end-line="351" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/common.js">
+    <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56049824">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.5320285">
+          <caret line="91" column="31" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
           <folding>
-            <element signature="e#2259#2561#0" expanded="false" />
+            <marker date="1458210939862" expanded="true" signature="2648:2670" placeholder="SELECT * FRO..fd_users..." />
           </folding>
         </state>
       </provider>

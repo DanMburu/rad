@@ -53,7 +53,7 @@ $(document).on("pageshow", "#login", function () { // When entering login
                      try{
                      SaveUserDetails(data);
                      }catch(err){}
-                     
+
 
                    // $('.span-success').show();
                     $.mobile.changePage('#landing', {
