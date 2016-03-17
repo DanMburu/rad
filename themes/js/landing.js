@@ -7,9 +7,9 @@ function onDeviceReady() {
     alert('ready');
     db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);
     var firstrun = window.localStorage.getItem("runned");
-    //  firstrun = null;
+
     alert(firstrun);
-    if (firstrun == null ) {
+    if (firstrun === null ) {
         setTimeout(function(){hideLoader(); }, 2000);
         $('#landing').fadeIn();
     }

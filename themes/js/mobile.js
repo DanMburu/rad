@@ -10,9 +10,8 @@ function onDeviceReady() {
 
     var firstrun = window.localStorage.getItem("runned");
 
-    //  firstrun = null;
      alert(firstrun);
-    if (firstrun == null) {
+    if (firstrun === null) {
         setTimeout(function () {
             $('.lnklogin').click();
         }, 2000);
@@ -143,7 +142,7 @@ function SaveUserDetails(data) {
         function (tx) {
             tx.executeSql(sql);
             window.localStorage.setItem("runned", "1");
-
+            alert(window.localStorage.getItem("runned"));
         },
         function (error) {
             console.log(error);
