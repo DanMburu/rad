@@ -11,7 +11,7 @@ function onDeviceReady() {
     var firstrun = window.localStorage.getItem("runned");
 
     //  firstrun = null;
-    // alert(firstrun);
+     alert(firstrun);
     if (firstrun == null) {
         setTimeout(function () {
             $('.lnklogin').click();

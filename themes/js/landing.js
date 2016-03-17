@@ -12,42 +12,13 @@ function onDeviceReady() {
     if (firstrun == null ) {
         setTimeout(function(){hideLoader(); }, 2000);
         $('#landing').fadeIn();
-        populateDB();
     }
     else {
         GetUserDetails();
     }
 
-
-
 } //onDeviceReady
 
-
-
-function populateDB(data){
-
- alert('populateDB');
-//Create Table
-    db.transaction(
-        function(tx) {
-
-//Create user table
-
-            var sql = "DROP TABLE IF EXISTS fd_users";
-            tx.executeSql(sql);
-            sql = " CREATE TABLE IF NOT EXISTS fd_users ( "+
-                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "UserName VARCHAR(200), " +
-                "AccountType VARCHAR(200), " +
-                "UserId INTEGER(20))";
-            tx.executeSql(sql);
-
-
-        },
-        function(error){console.log(error); alert('An error has occured. Please try again and check your internet connection');}
-    );
-
-}
 
 function GetUserDetails(){
     alert('getting user details');
