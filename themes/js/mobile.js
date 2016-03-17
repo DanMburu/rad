@@ -135,7 +135,7 @@ function transaction_error(tx, error) {
 }
 
 function SaveUserDetails(data, accountType) {
-
+alert('Data:'+data+' AccountType:'+accountType);
     var sql = "insert into fd_users(UserName,UserId,AccountType) values('user','" + data + "'," + accountType + ")";
     db.transaction(
         function (tx) {
