@@ -10,8 +10,9 @@ function onDeviceReady() {
 
     var firstrun = window.localStorage.getItem("runned");
 
+    //  firstrun = null;
      alert(firstrun);
-    if (firstrun === null) {
+    if (firstrun == null) {
         setTimeout(function () {
             $('.lnklogin').click();
         }, 2000);
@@ -21,7 +22,7 @@ function onDeviceReady() {
         setTimeout(function () {
             $('#lnklanding').click();
         }, 2000);
-
+        alert('Getting user details');
         GetUserDetails();
     }
 
@@ -74,7 +75,6 @@ function onError2(error) {
 
 function populateDB(data) {
 
-
 //Create Table
     db.transaction(
         function (tx) {
@@ -89,8 +89,6 @@ function populateDB(data) {
                 "AccountType VARCHAR(200), " +
                 "UserId INTEGER(20))";
             tx.executeSql(sql);
-
-
         },
         function (error) {
             console.log(error);
@@ -110,15 +108,13 @@ function GetUserDetails() {
                 for (var i = 0; i < len; i++) {
                     var row = result.rows.item(i);
                     $('#USERID').val(row.UserId);
-                    $.mobile.changePage( '#landing', {
-                        type: "get",
-                        transition: "flip"
-                    });
                     setTimeout(function () {
                         startChat();
 
                     }, 1000);
+
                     //	alert(row.subscriber_id);
+
                 }// End for
             },
             function (error) { // On error
@@ -136,13 +132,14 @@ function transaction_error(tx, error) {
 }
 
 function SaveUserDetails(data) {
+   var dArray=data.split(",");
 
     var sql = "insert into fd_users(UserName,UserId,AccountType) values('user','" + dArray[0] + "'," + dArray[1] + ")";
     db.transaction(
         function (tx) {
             tx.executeSql(sql);
             window.localStorage.setItem("runned", "1");
-            alert(window.localStorage.getItem("runned"));
+
         },
         function (error) {
             console.log(error);
