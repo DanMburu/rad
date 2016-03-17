@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+    $("body>[data-role='panel']").panel();
+    $(".jqm-navmenu-link,#mainmenu a, #footermenu").on("click", function () {
+        menuOpen();
+    });
+
+
     $('#chatmessage').keypress(function (e) {
         if (e.keyCode == 13)
             $('.sendsignalr').trigger('click');
@@ -74,14 +81,7 @@ $(document).on("pageshow", "#login", function () { // When entering login
 
 $(document).on("pageshow", function () { // When entering login
 
-    $("body>[data-role='panel']").panel();
-    $(".jqm-navmenu-link,#mainmenu a, #footermenu").off('click').on("click", function () {
-        menuOpen();
-    });
-    $("#mainmenu a").off('click').on("click", function () {
-        //  menuClose();
-        menuOpen();
-    });
+
 }); //pageshow
 
 
@@ -195,7 +195,7 @@ function menuOpen(){
 
         if ($('#menupanel').hasClass('ui-panel-open')) {
 
-            $('#menuclose').trigger('click');
+             $('#menuclose').trigger('click');
         } else {
 
             $('#menuicon').trigger('click');
