@@ -49,11 +49,11 @@ $(document).on("pageshow", "#login", function () { // When entering login
                     $("#UserId").val(rdata);
                     startChat();
 
-                    /*
+
                      try{
                      SaveUserDetails(data);
                      }catch(err){}
-                     */
+                     
 
                    // $('.span-success').show();
                     $.mobile.changePage('#landing', {
