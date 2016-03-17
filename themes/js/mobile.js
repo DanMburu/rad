@@ -134,9 +134,10 @@ function transaction_error(tx, error) {
     alert("Database Error: " + error);
 }
 
-function SaveUserDetails(data, accountType) {
-alert('Data:'+data+' AccountType:'+accountType);
-    var sql = "insert into fd_users(UserName,UserId,AccountType) values('user','" + data + "'," + accountType + ")";
+function SaveUserDetails(data) {
+   var dArray=data.split(",");
+alert('Data:'+dArray[0]+' AccountType:'+dArray[1]);
+    var sql = "insert into fd_users(UserName,UserId,AccountType) values('user','" + dArray[0] + "'," + dArray[1] + ")";
     db.transaction(
         function (tx) {
             tx.executeSql(sql);
