@@ -26,7 +26,7 @@ function onDeviceReady() {
 
 function populateDB(data){
 
-// alert('populateDB');
+ alert('populateDB');
 //Create Table
     db.transaction(
         function(tx) {

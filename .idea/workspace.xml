@@ -43,10 +43,10 @@
       <file leaf-file-name="mobile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="57" />
+            <state vertical-scroll-proportion="-7.1923075">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding>
-                <marker date="1458212878861" expanded="true" signature="2612:2634" placeholder="SELECT * FRO..fd_users..." />
+                <marker date="1458213850588" expanded="true" signature="2561:2583" placeholder="SELECT * FRO..fd_users..." />
               </folding>
             </state>
           </provider>
@@ -55,10 +55,10 @@
       <file leaf-file-name="landing.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54092526">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.455516">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding>
-                <marker date="1458213704432" expanded="true" signature="1323:1345" placeholder="select * fro..fd_users..." />
+                <marker date="1458213850531" expanded="true" signature="1321:1343" placeholder="select * fro..fd_users..." />
               </folding>
             </state>
           </provider>
@@ -125,8 +125,8 @@
         <option value="$PROJECT_DIR$/client.html" />
         <option value="$PROJECT_DIR$/doctor.html" />
         <option value="$PROJECT_DIR$/themes/js/common.js" />
-        <option value="$PROJECT_DIR$/themes/js/mobile.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/themes/js/mobile.js" />
         <option value="$PROJECT_DIR$/themes/js/landing.js" />
       </list>
     </option>
@@ -816,16 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="57" />
-          <folding>
-            <marker date="1458212878861" expanded="true" signature="2612:2634" placeholder="SELECT * FRO..fd_users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.26">
@@ -842,12 +832,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <marker date="1458213850588" expanded="true" signature="2561:2583" placeholder="SELECT * FRO..fd_users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54092526">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.455516">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding>
-            <marker date="1458213704432" expanded="true" signature="1323:1345" placeholder="select * fro..fd_users..." />
+            <marker date="1458213850531" expanded="true" signature="1321:1343" placeholder="select * fro..fd_users..." />
           </folding>
         </state>
       </provider>

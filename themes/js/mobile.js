@@ -75,7 +75,7 @@ function onError2(error) {
 
 function populateDB(data) {
 
- alert('populateDB');
+
 //Create Table
     db.transaction(
         function (tx) {
@@ -90,7 +90,7 @@ function populateDB(data) {
                 "AccountType VARCHAR(200), " +
                 "UserId INTEGER(20))";
             tx.executeSql(sql);
-       alert('Table created');
+
 
         },
         function (error) {
