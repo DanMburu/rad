@@ -11,7 +11,7 @@ function onDeviceReady() {
     var firstrun = window.localStorage.getItem("runned");
 
     //  firstrun = null;
-     alert(firstrun);
+    // alert(firstrun);
     if (firstrun == null) {
         setTimeout(function () {
             $('.lnklogin').click();
@@ -22,7 +22,7 @@ function onDeviceReady() {
         setTimeout(function () {
             $('#lnklanding').click();
         }, 2000);
-        alert('Getting user details');
+
         GetUserDetails();
     }
 
@@ -111,13 +111,15 @@ function GetUserDetails() {
                 for (var i = 0; i < len; i++) {
                     var row = result.rows.item(i);
                     $('#USERID').val(row.UserId);
+                    $.mobile.changePage( '#landing', {
+                        type: "get",
+                        transition: "flip"
+                    });
                     setTimeout(function () {
                         startChat();
 
                     }, 1000);
-
                     //	alert(row.subscriber_id);
-
                 }// End for
             },
             function (error) { // On error
@@ -135,8 +137,7 @@ function transaction_error(tx, error) {
 }
 
 function SaveUserDetails(data) {
-   var dArray=data.split(",");
-alert('Data:'+dArray[0]+' AccountType:'+dArray[1]);
+
     var sql = "insert into fd_users(UserName,UserId,AccountType) values('user','" + dArray[0] + "'," + dArray[1] + ")";
     db.transaction(
         function (tx) {

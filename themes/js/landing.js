@@ -48,11 +48,13 @@ function populateDB(data){
 }
 
 function GetUserDetails(){
+    alert('getting user details');
     db.transaction(function(transaction) {
         transaction.executeSql("select * from fd_users", [],
             function(tx, result) { // On Success
                 var len = result.rows.length;
                 for (var i=0; i<len; i++) {
+                    alert(row.AccountType);
                     var row = result.rows.item(i);
                     if(row.AccountType==1){
                        window.location="doctor.html";
