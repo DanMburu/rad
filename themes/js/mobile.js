@@ -133,7 +133,7 @@ function transaction_error(tx, error) {
 
 function SaveUserDetails(data) {
    var dArray=data.split(",");
-
+alert(dArray[0] + " " + dArray[1]);
     var sql = "insert into fd_users(UserName,UserId,AccountType) values('user','" + dArray[0] + "'," + dArray[1] + ")";
     db.transaction(
         function (tx) {
