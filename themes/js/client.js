@@ -143,6 +143,7 @@ scope.getHospitalDetails=function(id,hasBranches){
         http.get(url).success(function(data) {
             scope.hospital = data.hospital;
             scope.clinics = data.clinics;
+			scope.insurancesAccepted = data.insuranceAccepted;
             $.mobile.changePage( '#hospitals-details', {type: "get", transition: "slide"});
             hideLoader();
         });
@@ -155,6 +156,7 @@ scope.getBranchDetails=function(hospitalId,branchId){
         http.get(url).success(function(data) {
             scope.hospital = data.hospital;
             scope.branch = data.branch;
+			scope.insurancesAccepted = data.insuranceAccepted;
             scope.galleryImages = data.galleryImages;
             $.mobile.changePage( '#branch-details', {type: "get", transition: "slide"});
             hideLoader();

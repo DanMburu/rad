@@ -857,11 +857,11 @@
 
             <div class="row hospital-actions">
 
-                <div class="col-xs-6 col-md-6"><a class="insurance-accepted" href="#hospital-details-insurance"
+                <div class="col-xs-6 col-md-6"><a class="insurance-accepted" href="#branch-details-insurance"
                                                   data-rel="popup" data-position-to="window" data-transition="pop">Insurance
                     Accepted</a></div>
 
-                <div class="col-xs-6 col-md-6"><a class="branches" href="#clinics-popup"
+                <div class="col-xs-6 col-md-6"><a class="branches" href="#branch-clinics-popup"
                                                   data-rel="popup" data-position-to="window" data-transition="pop">Clinics</a>
                 </div>
 
@@ -901,7 +901,7 @@
             <input type="hidden" value="{{hospital.Latitude}}" id="HospitalLatitude"/>
             <input type="hidden" value="{{hospital.Longitude}}" id="HospitalLongitude"/>
 
-            <div data-role="popup" id="hospital-details-insurance" data-dismissible="true" style="max-width: 400px;">
+            <div data-role="popup" id="branch-details-insurance" data-dismissible="true" style="max-width: 400px;">
                 <div data-role="header">
                     <h1 class="popup-header"></h1>
                 </div>
@@ -909,7 +909,7 @@
                     <div class="popup-text">
                         <p class="poptext"></p>
                         <ul id="insurance-cont">
-                            <li ng-repeat="accepted in hospital.InsurancesAccepted">
+                            <li ng-repeat="accepted in insurancesAccepted">
                                 {{accepted.InsuranceCompany.Name}}
                             </li>
                         </ul>
@@ -922,7 +922,7 @@
 
                 </div>
             </div>
-            <div data-role="popup" id="clinics-popup" data-dismissible="true" style="max-width: 400px;">
+            <div data-role="popup" id="branch-clinics-popup" data-dismissible="true" style="max-width: 400px;">
                 <div data-role="header">
                     <h1 class="popup-header"></h1>
                 </div>
