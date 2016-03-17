@@ -101,6 +101,7 @@ function populateDB(data) {
 
 
 function GetUserDetails() {
+    alert('down');
     db.transaction(function (transaction) {
         transaction.executeSql("SELECT * FROM fd_users", [],
             function (tx, result) { // On Success
@@ -118,7 +119,8 @@ function GetUserDetails() {
                 }// End for
             },
             function (error) { // On error
-
+                var err=JSON.stringify(error, null, 4);
+              alert(err);
             });
 
     });	//transaction
