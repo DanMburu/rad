@@ -55,10 +55,10 @@
       <file leaf-file-name="landing.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17081851">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.54092526">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <marker date="1458213292946" expanded="true" signature="1326:1348" placeholder="select * fro..fd_users..." />
+                <marker date="1458213704432" expanded="true" signature="1323:1345" placeholder="select * fro..fd_users..." />
               </folding>
             </state>
           </provider>
@@ -844,10 +844,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17081851">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.54092526">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <marker date="1458213292946" expanded="true" signature="1326:1348" placeholder="select * fro..fd_users..." />
+            <marker date="1458213704432" expanded="true" signature="1323:1345" placeholder="select * fro..fd_users..." />
           </folding>
         </state>
       </provider>
