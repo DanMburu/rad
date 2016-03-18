@@ -9,7 +9,7 @@ function onDeviceReady() {
     var firstrun = window.localStorage.getItem("runned");
 
 
-    if (firstrun === null ) {
+    if (firstrun === null || firstrun === 'null' ) {
         setTimeout(function(){hideLoader(); }, 2000);
         $('#landing').fadeIn();
     }
