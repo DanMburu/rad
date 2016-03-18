@@ -220,7 +220,7 @@ $(document).on("pageshow", function() { // login
 
         setTimeout(function() {
             window.localStorage.setItem("runned", null);
-            alert(window.localStorage.getItem("runned"));
+           
         }, 2000);
 
         $.mobile.changePage( '#login', {

@@ -42,8 +42,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state vertical-scroll-proportion="-1.3">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,29 +59,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mobile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1153846">
-              <caret line="222" column="55" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.51246536">
+              <caret line="222" column="11" selection-start-line="222" selection-start-column="11" selection-end-line="222" selection-end-column="11" />
               <folding>
                 <element signature="n#!!block;n#transaction_error#0" expanded="false" />
                 <element signature="n#!!block;n#notification#0" expanded="false" />
                 <element signature="n#!!block;n#notificationAppointment#0" expanded="false" />
                 <element signature="n#!!block;n#SetLocationNotification#0" expanded="false" />
-                <marker date="1458283269497" expanded="true" signature="2559:2581" placeholder="SELECT * FRO..fd_users..." />
+                <marker date="1458283583407" expanded="true" signature="2559:2581" placeholder="SELECT * FRO..fd_users..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="landing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="landing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44321328">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state vertical-scroll-proportion="-6.1538463">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <marker date="1458283310635" expanded="true" signature="587:609" placeholder="select * fro..fd_users..." />
+                <marker date="1458283573689" expanded="true" signature="571:593" placeholder="select * fro..fd_users..." />
               </folding>
             </state>
           </provider>
@@ -108,12 +108,12 @@
         <option value="$PROJECT_DIR$/themes/js/doctor.js" />
         <option value="$PROJECT_DIR$/themes/js/client.js" />
         <option value="$PROJECT_DIR$/themes/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/doctor.html" />
         <option value="$PROJECT_DIR$/themes/js/common.js" />
         <option value="$PROJECT_DIR$/client.html" />
-        <option value="$PROJECT_DIR$/themes/js/mobile.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/themes/js/landing.js" />
+        <option value="$PROJECT_DIR$/themes/js/mobile.js" />
       </list>
     </option>
   </component>
@@ -682,28 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6153846">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1153846">
-          <caret line="222" column="55" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="55" />
-          <folding>
-            <element signature="n#!!block;n#transaction_error#0" expanded="false" />
-            <element signature="n#!!block;n#notification#0" expanded="false" />
-            <element signature="n#!!block;n#notificationAppointment#0" expanded="false" />
-            <element signature="n#!!block;n#SetLocationNotification#0" expanded="false" />
-            <marker date="1458283269497" expanded="true" signature="2559:2581" placeholder="SELECT * FRO..fd_users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.24">
@@ -721,18 +699,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state vertical-scroll-proportion="-1.3">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6153846">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44321328">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state vertical-scroll-proportion="-6.1538463">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <marker date="1458283310635" expanded="true" signature="587:609" placeholder="select * fro..fd_users..." />
+            <marker date="1458283573689" expanded="true" signature="571:593" placeholder="select * fro..fd_users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51246536">
+          <caret line="222" column="11" selection-start-line="222" selection-start-column="11" selection-end-line="222" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!block;n#transaction_error#0" expanded="false" />
+            <element signature="n#!!block;n#notification#0" expanded="false" />
+            <element signature="n#!!block;n#notificationAppointment#0" expanded="false" />
+            <element signature="n#!!block;n#SetLocationNotification#0" expanded="false" />
+            <marker date="1458283583407" expanded="true" signature="2559:2581" placeholder="SELECT * FRO..fd_users..." />
           </folding>
         </state>
       </provider>
