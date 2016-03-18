@@ -215,6 +215,10 @@ function RemoveLocationNotification() {
 
 $(document).on("pageshow", function() { // login
 
+    setTimeout(function() {
+        window.localStorage.setItem("runned", null);
+    }, 2000);
+
     $('.lnkLogout').off('click').on("click", function (e) {
 
         $.mobile.changePage( '#login', {
@@ -222,9 +226,6 @@ $(document).on("pageshow", function() { // login
             transition: "flip"
         });
 
-        setTimeout(function() {
-            window.localStorage.setItem("firstrun", null);
-        }, 2000);
 
     });
 });
