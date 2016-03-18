@@ -8,7 +8,7 @@ function onDeviceReady() {
     db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);
     var firstrun = window.localStorage.getItem("runned");
 
-
+alert(firstrun);
     if (firstrun === null || firstrun === 'null' ) {
         setTimeout(function(){hideLoader(); }, 2000);
         $('#landing').fadeIn();
