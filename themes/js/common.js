@@ -58,7 +58,7 @@ $(document).on("pageshow", "#login", function () { // When entering login
 
 
                      try{
-                     SaveUserDetails(data);
+                     // SaveUserDetails(data);
                      }catch(err){}
 
 
