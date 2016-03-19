@@ -459,7 +459,8 @@ $('#ddBookDoctorId').on('change',function(){
 
 
                     } else{
-                        $("#USERID").val(rdata);
+                        var dArray=rdata.split(",");
+                        $("#UserId").val(dArray[0]);
                         // $('.span-success').show();
                         //Save Data
                         try {

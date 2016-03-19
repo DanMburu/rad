@@ -53,12 +53,13 @@ $(document).on("pageshow", "#login", function () { // When entering login
                     alert("Email and password did not match.");
                 }
                 else {
-                    $("#UserId").val(rdata);
+                    var dArray=rdata.split(",");
+                    $("#UserId").val(dArray[0]);
                     startChat();
 
 
                      try{
-                     // SaveUserDetails(data);
+                      SaveUserDetails(data);
                      }catch(err){}
 
 

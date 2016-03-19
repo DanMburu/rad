@@ -229,7 +229,8 @@ $(document).on("pageshow", "#register", function () {
             if (rdata.indexOf("Error") === 0) {
                 alert(rdata);
             } else{
-               $("#USERID").val(rdata);
+                var dArray=rdata.split(",");
+                $("#UserId").val(dArray[0]);
 			   $('.span-success').show();
                 try {
                     //Save Data
