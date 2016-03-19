@@ -334,6 +334,20 @@ scope.getDoctorsBooking=function(){
         hideLoader();
     }).error(ajaxError);
 }; // End Function
+scope.getSlots = function () {
+    var dateBooked=$('#DateBooked').val();
+    var doctorId=$('#ddBookDoctorId').val();
+
+
+    var url = rootUrl + 'Client/AvailableSlots/' + scope.selectedBranch + '/' + scope.selectedSpeciality + '/' + doctorId + '/' + dateBooked + '/';
+    showLoader();
+    http.get(url).success(function (data) {
+        if (typeof data !== 'undefined') {
+            scope.availableSlots = data;
+        }
+        hideLoader();
+    }).error(ajaxError);
+}; // End Function
 
 }]);
 
@@ -641,3 +655,11 @@ $.urlParam = function(shows)
 { var results = new RegExp('[\\?&]' + shows+ '=([^&#]*)').exec(window.location.href);
     if (!results)   {          return '';      }     return results[1] || '';
 }
+
+
+ function linker(obby, nextDatebox) {
+     // Access the returned date
+     var setDate = obby.date;
+    $('#getSlots').trigger('click');
+ }
+
