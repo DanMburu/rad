@@ -5,17 +5,19 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
-    db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);
+    try{ db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);} catch(err){}
+
     var firstrun = window.localStorage.getItem("runned");
 
 
     if (firstrun === null || firstrun === 'null' ) {
         setTimeout(function(){hideLoader(); }, 2000);
-        $('#landing').fadeIn();
+        $.mobile.changePage('#landing', {type: "get", transition: "slide"});
     }
     else {
         GetUserDetails();
     }
+    hideLoader();
 
 } //onDeviceReady
 
@@ -47,8 +49,14 @@ function transaction_error(tx, error) {
   //  alert("Database Error: " + error);
 }
 $(document).ready(function(){
+    showLoader();
     $('a').on('click',function(){
         showLoader();
 
     })
 });
+$(document).on("pageshow",'#decoyLanding', function() { // login
+    showLoader();
+    onDeviceReady();
+});
+

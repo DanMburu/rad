@@ -541,3 +541,42 @@ select option {
 	padding: 10px 25px 0;
 }
 .lb-nav a.lb-next,.lb-nav a.lb-prev{opacity: 1 !important;}
+.landing{text-align:center}
+.landing a {
+	float: left;
+	text-decoration: none;
+	width: 100%;
+	padding-bottom: 30px;
+}
+.landing span {
+	clear: left;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+.landing img{padding: 0 auto}
+.featured-products {
+	padding-top: 15px;
+}
+.featured-products .thumbnail {
+	height: 100px;
+}
+.featured-products > h2 {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+h2.bordered {
+	border-bottom: 1px solid #efefef;
+	float: left;
+	font-size: 16px;
+	width: 100%;
+}
+.row {
+	clear: both;
+	width: auto;
+}
+.ui-mobile label, div.ui-controlgroup-label {
+	font-size: 14px;
+	font-weight: 400;
+}
+#product-details .title-link{font-size: 16px}

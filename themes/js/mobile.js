@@ -6,23 +6,16 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 
 
-    db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);
+    try{ db = window.openDatabase("Radioson", "1.0", "PhoneGap Demo", 200000);} catch(err){}
 
     var firstrun = window.localStorage.getItem("runned");
 
-    //  firstrun = null;
-   //  alert(firstrun);
-    if (firstrun == null) {
-        setTimeout(function () {
-            $('.lnklogin').click();
-        }, 2000);
+    if (firstrun === null || firstrun==='null') {
+       // $.mobile.changePage( '#login', {type: "get", transition: "slide"});
         populateDB();
     }
     else {
-        setTimeout(function () {
-            $('#lnklanding').click();
-        }, 2000);
-
+      //  $.mobile.changePage( '#dashboard', {type: "get", transition: "slide"});
         GetUserDetails();
     }
 
@@ -228,6 +221,32 @@ $(document).on("pageshow", function() { // login
             transition: "flip"
         });
 
-
     });
+
 });
+$(document).on("pageshow",'#decoyLanding', function() { // login
+
+    showLoader();
+    var firstrun = window.localStorage.getItem("runned");
+    if (firstrun === null || firstrun==='null') {
+        $.mobile.changePage( '#login', {type: "get", transition: "slide"});
+        setTimeout(function () {
+          populateDB();
+        }, 2000);
+    }
+    else {
+
+            $.mobile.changePage( '#landing', {type: "get", transition: "slide"});
+
+    }
+});
+function landing(){
+
+    var firstrun = window.localStorage.getItem("runned");
+    if (firstrun === null || firstrun==='null') {
+        $.mobile.changePage('#login', {type: "get", transition: "slide"});
+    }
+    else {
+        $.mobile.changePage('#landing', {type: "get", transition: "slide"});
+    }
+}

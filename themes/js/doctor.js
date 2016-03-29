@@ -4,10 +4,62 @@ var ajaxError = function (object) {
    // $('#output').text(JSON.stringify(object, null, 4));
 };
 
-var app = angular.module("clientApp", ["ngSanitize"]);
+var app = angular.module("clientApp", ["AxelSoft","ngSanitize"]).filter('htmlToPlaintext', function() {
+    return function(text) {
+        if(text===null || text==='null' || text==='')
+            return '';
+
+        return String(text).replace(/<[^>]+>/gm, '');
+    }
+}).filter('httpWebsite', function() {
+    return function(text) {
+        return 'http://'+String(text).replace('http://', '');
+    }
+}).filter('Distance', function() {
+    return function(lat1,lon1) {
+
+        var d='';
+        if($('#HFLatitude').val()!=='0' && typeof lat1!=='undefined' && lat1!==null) {
+            var lat2 = $('#HFLatitude').val();
+            var lon2 = $('#HFLongitude').val();
+            var R = 6371; // km (change this constant to get miles)
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLon = (lon2 - lon1) * Math.PI / 180;
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            d = R * c;
+            d = 'Aprox '+ d.toFixed(2)+' km';
+        }
+        return d;
+    }
+});
 app.controller('clientCtrl',['$scope','$http','$filter', function (scope,http,filter){
     var rootUrl = $('#RootUrl').val();
     scope.SiteUrl=$('#SiteUrl').val();
+    scope.UploadsRoot = $('#SiteUrl').val()+'Content/uploads/images';
+
+    scope.initApp=function(){
+        var url = $('#RootUrl').val() + 'Client/Init/'+$('#UserId').val();
+        showLoader();
+        http.get(url).success(function(data) {
+
+            scope.featuredProducts = data['featuredProducts'];
+            scope.user = data['user'];
+            scope.hospitals = data['hospitals'];
+            scope.specialities = data['specialities'];
+            scope.counties = data['counties'];
+            scope.locations = data['locations'];
+
+            hideLoader();
+            setTimeout(function(){
+                $(".owl-carousel").owlCarousel({margin:5,nav:false,dots:true,autoplay:true,autoplayTimeout:2000,loop:true});
+            },1000)
+
+        });
+    };
+
     scope.getPatientQueries=function(){
         var url = $('#RootUrl').val() + 'Doctor/Queries/'+$('#UserId').val();
         showLoader();
@@ -150,6 +202,15 @@ app.controller('clientCtrl',['$scope','$http','$filter', function (scope,http,fi
             hideLoader();
         });
     }; // End Function
+    scope.getProductDetails=function(id){
+        var url = rootUrl+'Products/'+id+'/';
+        showLoader();
+        http.get(url).success(function(data) {
+            scope.product = data;
+            $.mobile.changePage( '#product-details', {type: "get", transition: "slide"});
+            hideLoader();
+        });
+    };// End Function
 
 
 }]);

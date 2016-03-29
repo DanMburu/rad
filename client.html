@@ -35,8 +35,11 @@
 
     <link rel="stylesheet" href="themes/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="themes/css/custom-select.css"/>
-    <link rel="stylesheet" href="themes/js/lightbox.js"/>
+
     <link href="themes/css/lightbox.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="themes/css/owl.carousel.css">
+    <script src="themes/js/owl.carousel.min.js"></script>
 
 </head>
 
@@ -44,8 +47,8 @@
 
 <input type="hidden" id="RootUrl" value="http://ay.kendevs.com/MobileApi/api/"/>
 <input type="hidden" id="SiteUrl" value="http://ay.kendevs.com/"/>
-<!--
 
+<!--
 <input type="hidden" id="RootUrl" value="http://localhost:26153/api/"/>
 <input type="hidden" id="SiteUrl" value="http://localhost:14931/"/>
 -->
@@ -67,8 +70,8 @@
         <li class="ui-first-child"><a href="#" id="menu-teaser" class="ui-btn">Main Menu</a></li>
 
         <li><a class="lnkhospitalsearch ui-btn ui-btn-icon-right ui-icon-carat-r" href="#landing">Home</a></li>
-        <li><a class="lnkhospitalsearch ui-btn ui-btn-icon-right ui-icon-carat-r" ng-click="searchHospitals()" href="#">Search
-            Hospitals</a></li>
+        <li><a class="lnkhospitalsearch ui-btn ui-btn-icon-right ui-icon-carat-r" ng-click="searchHospitals()" href="#">
+            Hospital Directory</a></li>
         <!--
     <li><a class="lnkhospitalsearchByDIstance ui-btn ui-btn-icon-right ui-icon-carat-r" data-transition="slide"
            href="#nearby">Search By Distance</a>
@@ -85,18 +88,25 @@
             Aid Tips</a></li>
         <li><a class="lnkMyAccount ui-btn ui-btn-icon-right ui-icon-carat-r" ng-click="getProfile()" href="#">My
             Profile</a></li>
+        <li><a class="lnkLanding ui-btn ui-btn-icon-right ui-icon-carat-r"  href="#main-landing"  data-transition="slide" >Landing Page</a></li>
         <li><a class="lnkLogout ui-btn ui-btn-icon-right ui-icon-carat-r"  href="#">Log out</a></li>
-        <li><a class="lnkfirstaid ui-btn ui-btn-icon-right ui-icon-carat-r" data-transition="slide" target="_blank"
-               href="http://radiosonconsult.com">Radioson
-            Website</a></li>
+
     </ul>
 </div>
 <main id="main-panel">
+    <div data-role="page" id="decoyLanding"  >
+        <div data-role="header">
+
+            <img src="images/logo.png" width="254" height="56" alt=""/>
+
+        </div>
+        <div class="landing" data-role="content">
+
+        </div>
+    </div>
 
     <div data-role="page" id="login" data-theme="a">
         <div data-role="header">
-            <a href="#" data-role="none"
-               class="jqm-navmenu-link ui-btn ui-btn-icon-notext  ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
             <img src="images/logo.png" width="254" height="56" alt=""/>
         </div>
         <div data-role="content">
@@ -151,10 +161,48 @@
                 <li><a class="lnkfirstaid" data-transition="slide" target="_blank" href="http://radiosonconsult.com">Radioson
                     Website</a></li>
             </ul>
+            <a data-role="none" id="lnkInit" ng-click="initApp()" href="#"></a>
+            <!-- Set up your HTML -->
+            <div class="featured-products">
+                <h2>Featured Products</h2>
+            <div class="owl-carousel">
+
+                <div ng-repeat="product in featuredProducts">
+                    <a href="#" ng-click="getProductDetails(product.Id)">
+                    <div class="thumbnail">
+                    <img src="{{UploadsRoot}}/products/th_{{product.Image}}" class="img-responsive">
+                    </div>
+                    <span>{{product.Name}}</span>
+                    </a>
+                </div>
+
+            </div>
+
+            </div>
 
         </div>
         <div data-role="footer">
             <h4></h4>
+        </div>
+    </div>
+
+    <div data-role="page" id="main-landing">
+        <div data-role="header">
+            <a href="#" data-role="none"
+               class="jqm-navmenu-link ui-btn ui-btn-icon-notext  ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+            <img src="images/logo.png" width="254" height="56" alt=""/>
+
+        </div>
+        <div class="landing" data-role="content">
+
+            <a href="#" onclick="landing()" style="padding-top: 60px">
+                <img src="images/patient.png">
+                <span>Patients' App</span>
+            </a>
+            <a href="doctor.html" data-ajax="false"><img src="images/doctor.png">
+                <span>Doctors' App</span>
+            </a>
+
         </div>
     </div>
 
@@ -455,12 +503,11 @@
                 <div data-role="fieldcontain">
                     <label for="selectmenu" class="select">Location:</label>
 
-                    <div
-                            custom-select="s.Id as s.Name for s in locations | filter:{Name: $searchTerm,CountyId: dirCity||''}"
+                    <div custom-select="s.Id as s.Name for s in locations | filter:{Name: $searchTerm,CountyId: dirCity||''}"
                             ng-model="dirLocation"></div>
                 </div>
                 <div data-role="fieldcontain">
-                    <label>Keyword:</label>
+                    <label>Hospital Name:</label>
                     <input id="searchTerm" type="text" name="keyword"/>
                 </div>
 
@@ -639,11 +686,26 @@
                     </div>
                 </div>
             </div>
+            <div class="row hospital-actions">
+                <div class="col-xs-6 col-md-6"><a class="insurance-accepted" href="#hospital-details-insurance"
+                                                  data-rel="popup" data-position-to="window" data-transition="pop">Insurance
+                    Accepted</a></div>
+
+                <div class="col-xs-6 col-md-6"><a class="branches" href="#branches-popup"
+                                                  data-rel="popup" data-position-to="window" data-transition="pop">Clinics</a>
+                </div>
+
+                <div class="col-xs-6 col-md-6"><a class="lnkBookNow" ng-click="bookAppointment(hospital.Id)" href="#">Book
+                    an
+                    Appointment</a></div>
+                <div class="col-xs-6 col-md-6"><a class="lnkAskNow" ng-click="askQuiz(hospital.Id)"
+                                                  data-transition="slide" href="#">Consult Online</a></div>
+
+
+            </div>
             <!-- row-->
             <div class="row">
-                <div class="col-md-12">
-                    <div ng-bind-html="hospital.Description" id="desc"></div>
-                </div>
+
                 <div class="col-md-12 details-cont">
                     <div ng-show="hospital.OperatingHours!==''">
                         <label>Operating Hours: </label><span>{{hospital.OperatingHours}}</span>
@@ -666,6 +728,9 @@
                     </div>
 
                 </div>
+                <div class="col-md-12">
+                    <div ng-bind-html="hospital.Description" id="desc"></div>
+                </div>
 
             </div>
             <div class="row hospital-actions">
@@ -678,23 +743,7 @@
                 </div>
             </div>
 
-            <div class="row hospital-actions">
-                <div class="col-xs-6 col-md-6"><a class="insurance-accepted" href="#hospital-details-insurance"
-                                                  data-rel="popup" data-position-to="window" data-transition="pop">Insurance
-                    Accepted</a></div>
 
-                <div class="col-xs-6 col-md-6"><a class="branches" href="#branches-popup"
-                                                  data-rel="popup" data-position-to="window" data-transition="pop">Clinics</a>
-                </div>
-
-                <div class="col-xs-6 col-md-6"><a class="lnkBookNow" ng-click="bookAppointment(hospital.Id)" href="#">Book
-                    an
-                    Appointment</a></div>
-                <div class="col-xs-6 col-md-6"><a class="lnkAskNow" ng-click="askQuiz(hospital.Id)"
-                                                  data-transition="slide" href="#">Consult Online</a></div>
-
-
-            </div>
             <!-- row-->
             <input type="hidden" value="{{hospital.Id}}" id="HOSPITALID"/>
             <input type="hidden" value="{{hospital.Latitude}}" id="HospitalLatitude"/>
@@ -834,10 +883,27 @@
                 </div>
             </div>
             <!-- row-->
-            <div class="row">
-                <div class="col-md-12">
-                    <div ng-bind-html="branch.Description" id="desc"></div>
+            <div class="row hospital-actions">
+
+                <div class="col-xs-6 col-md-6"><a class="insurance-accepted" href="#branch-details-insurance"
+                                                  data-rel="popup" data-position-to="window" data-transition="pop">Insurance
+                    Accepted</a></div>
+
+                <div class="col-xs-6 col-md-6"><a class="branches" href="#branch-clinics-popup"
+                                                  data-rel="popup" data-position-to="window" data-transition="pop">Clinics</a>
                 </div>
+
+                <div class="col-xs-6 col-md-6"><a class="lnkBookNow" ng-click="bookAppointment(hospital.Id,branch.Id)"
+                                                  href="#">Book an
+                    Appointment</a></div>
+                <div class="col-xs-6 col-md-6"><a class="lnkAskNow" ng-click="askQuiz(hospital.Id,branch.Id)"
+                                                  data-transition="slide" href="#">Consult Online</a></div>
+
+
+            </div>
+            <!-- row-->
+            <div class="row">
+
                 <div class="col-md-12 details-cont">
                     <div ng-show="hospital.OperatingHours!==''">
                         <label>Operating Hours: </label><span>{{branch.OperatingHours}}</span>
@@ -858,28 +924,14 @@
                     </div>
 
                 </div>
-
-            </div>
-
-
-            <div class="row hospital-actions">
-
-                <div class="col-xs-6 col-md-6"><a class="insurance-accepted" href="#branch-details-insurance"
-                                                  data-rel="popup" data-position-to="window" data-transition="pop">Insurance
-                    Accepted</a></div>
-
-                <div class="col-xs-6 col-md-6"><a class="branches" href="#branch-clinics-popup"
-                                                  data-rel="popup" data-position-to="window" data-transition="pop">Clinics</a>
+                <div class="col-md-12">
+                    <div ng-bind-html="branch.Description" id="desc"></div>
                 </div>
 
-                <div class="col-xs-6 col-md-6"><a class="lnkBookNow" ng-click="bookAppointment(hospital.Id,branch.Id)"
-                                                  href="#">Book an
-                    Appointment</a></div>
-                <div class="col-xs-6 col-md-6"><a class="lnkAskNow" ng-click="askQuiz(hospital.Id,branch.Id)"
-                                                  data-transition="slide" href="#">Consult Online</a></div>
-
-
             </div>
+
+
+
 
             <!-- Page Content -->
             <div class="row">
@@ -1558,6 +1610,67 @@
 
         </div>
     </div>
+
+    <div data-role="page" id="product-details" data-theme="a">
+        <div data-role="header">
+            <a href="#" data-role="none"
+               class="jqm-navmenu-link ui-btn ui-btn-icon-notext  ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+            <img src="images/logo.png" width="254" height="56" alt=""/>
+        </div>
+        <div id="hospital-details" data-bind="foreach: singleHospital" data-role="content">
+
+
+            <div class="row small-gutter branch-header">
+                <div class="col-md-3 col-xs-3 clientlogo">
+                    <a data-lightbox="product-img" class="clearfix text-white"
+                       href='{{UploadsRoot}}/products/{{product.Image}}'>
+                        <img src="{{UploadsRoot}}/products/th_{{product.Image}}" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 no-gutter">
+                    <div class="col-lg-12 col-xs-12 col-sm-12">
+
+                        <a class="title-link" href="#"
+                           ng-click="getHospitalDetails(hospital.Id)">
+                            {{product.Name}}</a>
+                        <label><strong>Category:</strong> {{product.Category.Name}}</label>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- row-->
+            <div class="row">
+
+                <div class="col-md-12 details-cont">
+                    <div ng-bind-html="product.Description" id="desc"></div>
+
+                 <h2 class="bordered">Surplier Details</h2>
+                    <div>
+                        <label>Name:</label>{{product.Surplier.Name}}
+                    </div>
+                    <div ng-show="product.Surplier.Phone!=='' && product.Surplier.Phone!==null">
+                        <label>Phone:</label><a href="tel:{{product.Surplier.Mobile}}">{{product.Surplier.Phone}}</a>
+                    </div>
+
+                    <div ng-show="product.Surplier.Email!=='' && product.Surplier.Email!==null">
+                        <label>Email:</label><a href="mailto:{{product.Surplier.Email}}">{{product.Surplier.Email}}</a>
+                    </div>
+                    <div ng-show="product.Surplier.Website!=='' && product.Surplier.Website!==null">
+                        <label>Website:</label><a href="{{product.Surplier.Website|httpWebsite}}">{{product.Surplier.
+                        .Website}}</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
 
 
     <div id="customPreloader" class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span

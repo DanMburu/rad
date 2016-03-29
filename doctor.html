@@ -16,7 +16,7 @@
     <script src="themes/js/jqm-datebox.core.js"></script>
     <!--<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>-->
     <script src="themes/js/jqm-datebox.mode.flipbox.min.js"></script>
-
+    <link rel="stylesheet" href="themes/css/bootstrap.min.css"/>
 
     <link rel="stylesheet" type="text/css" href="themes/css/style.css">
 
@@ -28,6 +28,12 @@
     -->
     <link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min.css">
     <link rel="stylesheet" href="themes/css/custom-select.css" />
+
+
+    <link href="themes/css/lightbox.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="themes/css/owl.carousel.css">
+    <script src="themes/js/owl.carousel.min.js"></script>
 </head>
 
 <body ng-controller="clientCtrl">
@@ -66,13 +72,24 @@
             Tips</a></li>
         <li class="ui-last-child"><a href="#" class="lnkMyAccount ui-btn ui-btn-icon-right ui-icon-carat-r">My
             Account</a></li>
+        <li><a class="lnkLanding ui-btn ui-btn-icon-right ui-icon-carat-r"  href="#main-landing"  data-transition="slide" >Landing Page</a></li>
+
         <li><a class="lnkLogout ui-btn ui-btn-icon-right ui-icon-carat-r"  href="#">Log out</a></li>
     </ul>
 </div>
 <main id="main-panel">
-    <div data-role="page" id="login" data-theme="a"><div data-role="header">
-            <a href="#" data-role="none"
-               class="jqm-navmenu-link ui-btn ui-btn-icon-notext  ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+    <div data-role="page" id="decoyLanding"  >
+        <div data-role="header">
+
+            <img src="images/logo.png" width="254" height="56" alt=""/>
+
+        </div>
+        <div class="landing" data-role="content">
+
+        </div>
+    </div>
+    <div data-role="page" id="login" data-theme="a">
+        <div data-role="header">
             <img src="images/logo.png" width="254" height="56" alt=""/>
         </div>
         <div data-role="content">
@@ -108,23 +125,56 @@
         </div>
         <div data-role="content">
             <ul data-role="listview">
-                <li><a class="lnkhospitalsearch" href="#">Search Hospitals</a></li>
                 <li><a class="lnkMyQuestions" ng-click="getPatientQueries()" href="#">Patient Queries</a></li>
                 <li><a class="lnkMyAppointments" ng-click="getMyAppointments()" href="#">Appointments</a></li>
                 <li><a class="lnkAskQuiz" ng-click="getClinic()" data-transition="slide" href="#">My Clinics</a></li>
                 <li><a class="lnkMyAccount" ng-click="getProfile()" href="#">My Profile</a></li>
-                <!-- <li><a ng-click="register()" href="#">Register</a></li>-->
                 <li><a class="lnkfirstaid" data-transition="slide" target="_blank" href="http://radiosonconsult.com">Radioson
                     Website</a></li>
             </ul>
+
+            <a data-role="none" id="lnkInit" ng-click="initApp()" href="#"></a>
+            <!-- Set up your HTML -->
+            <div class="featured-products">
+                <h2>Featured Products</h2>
+                <div class="owl-carousel">
+                    <div ng-repeat="product in featuredProducts">
+                        <a href="#" ng-click="getProductDetails(product.Id)">
+                            <div class="thumbnail">
+                                <img src="{{UploadsRoot}}/products/th_{{product.Image}}" class="img-responsive">
+                            </div>
+                            <span>{{product.Name}}</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
         <div data-role="footer">
             <h4></h4>
         </div>
     </div>
+    <!--Close Page-->
+    <div data-role="page" id="main-landing">
+        <div data-role="header">
+            <a href="#" data-role="none"
+               class="jqm-navmenu-link ui-btn ui-btn-icon-notext  ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+            <img src="images/logo.png" width="254" height="56" alt=""/>
 
+        </div>
+        <div class="landing" data-role="content">
 
+            <a href="client.html" data-ajax="false" style="padding-top: 60px">
+                <img src="images/patient.png">
+                <span>Patients' App</span>
+            </a>
+            <a href="#" onclick="landing()"><img src="images/doctor.png">
+                <span>Doctors' App</span>
+            </a>
+
+        </div>
+    </div>
     <!--Close Page-->
     <div data-role="page" id="patient-queries" data-theme="a">
         <div data-role="header">
@@ -195,7 +245,8 @@
         </div>
     </div>
     <!-- Close page -->
-    <div data-role="page" id="register" data-theme="a"><div data-role="header">
+    <div data-role="page" id="register" data-theme="a">
+        <div data-role="header">
             <a href="#" data-role="none"
                class="jqm-navmenu-link ui-btn ui-btn-icon-notext  ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
             <img src="images/logo.png" width="254" height="56" alt=""/>
@@ -256,9 +307,7 @@
                 <button id="btnRegister" data-icon="star">Submit</button>
             </form>
         </div>
-        <div data-role="footer">
 
-        </div>
     </div>
     <div data-role="page" id="my-clinics" data-theme="a">
         <div data-role="header">
@@ -545,6 +594,63 @@
 
         </div>
     </div>
+    <div data-role="page" id="product-details" data-theme="a">
+        <div data-role="header">
+            <a href="#" data-role="none"
+               class="jqm-navmenu-link ui-btn ui-btn-icon-notext  ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+            <img src="images/logo.png" width="254" height="56" alt=""/>
+        </div>
+        <div id="hospital-details" data-bind="foreach: singleHospital" data-role="content">
+
+
+            <div class="row small-gutter branch-header">
+                <div class="col-md-3 col-xs-3 clientlogo">
+                    <a data-lightbox="product-img" class="clearfix text-white"
+                       href='{{UploadsRoot}}/products/{{product.Image}}'>
+                        <img src="{{UploadsRoot}}/products/th_{{product.Image}}" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 no-gutter">
+                    <div class="col-lg-12 col-xs-12 col-sm-12">
+
+                        <a class="title-link" href="#"
+                           ng-click="getHospitalDetails(hospital.Id)">
+                            {{product.Name}}</a>
+                        <label><strong>Category:</strong> {{product.Category.Name}}</label>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- row-->
+            <div class="row">
+
+                <div class="col-md-12 details-cont">
+                    <div ng-bind-html="product.Description" id="desc"></div>
+
+                    <h2 class="bordered">Surplier Details</h2>
+                    <div>
+                        <label>Name:</label>{{product.Surplier.Name}}
+                    </div>
+                    <div ng-show="product.Surplier.Phone!=='' && product.Surplier.Phone!==null">
+                        <label>Phone:</label><a href="tel:{{product.Surplier.Mobile}}">{{product.Surplier.Phone}}</a>
+                    </div>
+
+                    <div ng-show="product.Surplier.Email!=='' && product.Surplier.Email!==null">
+                        <label>Email:</label><a href="mailto:{{product.Surplier.Email}}">{{product.Surplier.Email}}</a>
+                    </div>
+                    <div ng-show="product.Surplier.Website!=='' && product.Surplier.Website!==null">
+                        <label>Website:</label><a href="{{product.Surplier.Website|httpWebsite}}">{{product.Surplier.
+                        .Website}}</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
 
 
     <div id="customPreloader" class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span
@@ -569,6 +675,7 @@
 <script src="themes/js/angular.min.js"></script>
 <script src="themes/js/angular-sanitize.min.js"></script>
 <script src="themes/js/customSelect.js"></script>
+<script src="themes/js/lightbox.js"></script>
 <script src="themes/js/doctor.js"></script>
 <script src="themes/js/signalr-doctor.js"></script>
 

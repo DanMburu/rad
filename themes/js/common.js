@@ -4,7 +4,9 @@ $(document).ready(function () {
     $(".jqm-navmenu-link,#mainmenu a, #footermenu").on("click", function () {
         menuOpen();
     });
-
+    setTimeout(function() {
+        $('#menupanel').show();
+    }, 1000);
 
     $('#chatmessage').keypress(function (e) {
         if (e.keyCode == 13)
@@ -18,14 +20,7 @@ var ajaxError = function (object) {
     alert("An error has occured processing your request. Please check your internet connection and try again.");
     hideLoader();
 };
-$(document).on("pageshow", "#landing", function() { // When entering pagetwo
 
-    setTimeout(function() {
-       // $('#landing').remove();
-       // $('body').removeClass('bdloading');
-        $('#menupanel').show();
-    }, 1000);
-});
 $(document).on("pageshow", "#login", function () { // When entering login
 
     $('#btnLogin').off('click').on("click", function (e) {
@@ -215,3 +210,9 @@ function validateEmail(email){
     }
     return true;
 }
+
+$(document).ready(function(){
+    setTimeout(function(){
+        $('#lnkInit').trigger('click');
+    },1000);
+});

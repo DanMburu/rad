@@ -12,9 +12,19 @@
     <script src="themes/js/common.js"></script>
     <script src="themes/js/landing.js"></script>
 </head>
-<body>
+<body onload="onDeviceReady()">
+<div data-role="page" id="decoyLanding"  >
+    <div data-role="header">
 
-<div data-role="pagexx" id="landing" onload="onBodyLoad()">
+        <img src="images/logo.png" width="254" height="56" alt=""/>
+
+    </div>
+    <div class="landing" data-role="content">
+
+    </div>
+</div>
+
+<div data-role="page" id="landing">
     <div data-role="header">
 
         <img src="images/logo.png" width="254" height="56" alt=""/>

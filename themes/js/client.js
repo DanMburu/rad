@@ -45,7 +45,25 @@ app.controller('clientCtrl',['$scope','$http', function (scope,http){
     };
 
 
+    scope.initApp=function(){
+        var url = $('#RootUrl').val() + 'Client/Init/'+$('#UserId').val();
+        showLoader();
+        http.get(url).success(function(data) {
 
+            scope.featuredProducts = data['featuredProducts'];
+            scope.user = data['user'];
+            scope.hospitals = data['hospitals'];
+            scope.specialities = data['specialities'];
+            scope.counties = data['counties'];
+            scope.locations = data['locations'];
+
+            hideLoader();
+            setTimeout(function(){
+                $(".owl-carousel").owlCarousel({margin:5,nav:false,dots:true,autoplay:true,autoplayTimeout:2000,loop:true});
+            },1000)
+
+        });
+    };
     scope.myQuestions=function(){
         var url = $('#RootUrl').val() + 'Client/Queries/'+$('#UserId').val();
         showLoader();
@@ -84,14 +102,15 @@ app.controller('clientCtrl',['$scope','$http', function (scope,http){
         });
     }; // End Function
 scope.searchHospitals=function(){
-    var url = rootUrl+'Mobile/Counties';
+    $.mobile.changePage( '#hospitals-search', {type: "get", transition: "slide"});
+    /*var url = rootUrl+'Mobile/Counties';
     showLoader();
     http.get(url).success(function(data) {
         scope.counties = data['Counties'];
         scope.locations = data['Locations'];
         $.mobile.changePage( '#hospitals-search', {type: "get", transition: "slide"});
         hideLoader();
-    });
+    });*/
 };
 scope.getHospitalSearchResults=function(){
     var city=scope.dirCity;
@@ -348,6 +367,16 @@ scope.getSlots = function () {
         hideLoader();
     }).error(ajaxError);
 }; // End Function
+scope.getProductDetails=function(id){
+
+    var url = rootUrl+'Products/'+id+'/';
+    showLoader();
+    http.get(url).success(function(data) {
+        scope.product = data;
+        $.mobile.changePage( '#product-details', {type: "get", transition: "slide"});
+        hideLoader();
+    });
+};// End Function
 
 }]);
 
@@ -522,10 +551,7 @@ $('#ddBookDoctorId').on('change',function(){
         });
 
     });
-    $(document).ready(function(){
 
-
-    });
     $('#updateProfile').on('click',function(){
         var $form = $('#frmUpdateProfile');
         var options = {
