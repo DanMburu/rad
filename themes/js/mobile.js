@@ -232,10 +232,9 @@ $(document).on("pageshow",'#decoyLanding', function() { // login
     alert(firstrun);
     if (firstrun === null || firstrun==='null') {
         alert('#login');
-        $.mobile.changePage( '#login', {type: "get", transition: "slide"});
-        setTimeout(function () {
-          populateDB();
-        }, 2000);
+        $.mobile.changePage('#login', {type: "get", transition: "slide"});
+
+        setTimeout(function () {populateDB();}, 2000);
     }
     else {
         alert('#landing');

@@ -22,7 +22,7 @@ var ajaxError = function (object) {
 };
 
 $(document).on("pageshow", "#login", function () { // When entering login
-
+alert("#login-pageshow");
     $('#btnLogin').off('click').on("click", function (e) {
         var allFilled = true;
         $('#frm-login :input:not(:button)').each(function (index, element) {

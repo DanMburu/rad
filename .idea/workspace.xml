@@ -98,8 +98,8 @@
       <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/js/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="537" column="45" selection-start-line="537" selection-start-column="43" selection-end-line="537" selection-end-column="45" />
+            <state vertical-scroll-proportion="-21.23077">
+              <caret line="497" column="46" selection-start-line="497" selection-start-column="46" selection-end-line="497" selection-end-column="46" />
               <folding>
                 <element signature="e#160#329#0" expanded="false" />
                 <element signature="e#392#461#0" expanded="false" />
@@ -108,13 +108,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="landing.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+              <folding>
+                <marker date="1458592078340" expanded="true" signature="654:676" placeholder="select * fro..fd_users..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="mobile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5524862">
-              <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.4198895">
+              <caret line="234" column="74" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
               <folding>
-                <marker date="1459427613469" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
+                <marker date="1459428233492" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
               </folding>
             </state>
           </provider>
@@ -123,8 +135,8 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.423077">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.6153846">
+              <caret line="27" column="63" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -152,11 +164,11 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/themes/js/landing.js" />
         <option value="$PROJECT_DIR$/themes/css/style.css" />
-        <option value="$PROJECT_DIR$/themes/js/common.js" />
         <option value="$PROJECT_DIR$/themes/js/doctor.js" />
         <option value="$PROJECT_DIR$/themes/js/client.js" />
         <option value="$PROJECT_DIR$/client.html" />
         <option value="$PROJECT_DIR$/doctor.html" />
+        <option value="$PROJECT_DIR$/themes/js/common.js" />
         <option value="$PROJECT_DIR$/themes/js/mobile.js" />
       </list>
     </option>
@@ -830,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -884,14 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.423077">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.52">
@@ -918,10 +915,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6153846">
+          <caret line="27" column="63" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/js/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="537" column="45" selection-start-line="537" selection-start-column="43" selection-end-line="537" selection-end-column="45" />
+        <state vertical-scroll-proportion="-21.23077">
+          <caret line="497" column="46" selection-start-line="497" selection-start-column="46" selection-end-line="497" selection-end-column="46" />
           <folding>
             <element signature="e#160#329#0" expanded="false" />
             <element signature="e#392#461#0" expanded="false" />
@@ -929,12 +934,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/js/landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+          <folding>
+            <marker date="1458592078340" expanded="true" signature="654:676" placeholder="select * fro..fd_users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5524862">
-          <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.4198895">
+          <caret line="234" column="74" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
           <folding>
-            <marker date="1459427613469" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
+            <marker date="1459428233492" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
           </folding>
         </state>
       </provider>
