@@ -123,10 +123,10 @@
       <file leaf-file-name="mobile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4198895">
-              <caret line="234" column="74" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.3314917">
+              <caret line="236" column="9" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
               <folding>
-                <marker date="1459428233492" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
+                <marker date="1459428495123" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
               </folding>
             </state>
           </provider>
@@ -946,10 +946,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/js/mobile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4198895">
-          <caret line="234" column="74" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.3314917">
+          <caret line="236" column="9" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
           <folding>
-            <marker date="1459428233492" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
+            <marker date="1459428495123" expanded="true" signature="2534:2556" placeholder="SELECT * FRO..fd_users..." />
           </folding>
         </state>
       </provider>

@@ -234,7 +234,7 @@ $(document).on("pageshow",'#decoyLanding', function() { // login
         alert('#login');
         $.mobile.changePage('#login', {type: "get", transition: "slide"});
 
-        setTimeout(function () {populateDB();}, 2000);
+       // setTimeout(function () {populateDB();}, 2000);
     }
     else {
         alert('#landing');
