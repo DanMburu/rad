@@ -21,8 +21,8 @@ var ajaxError = function (object) {
     hideLoader();
 };
 
-$(document).on("pageshow", "#login-page", function () { // When entering login
-alert("#login-pageshow");
+$(document).on("pageshow", "#login", function () { // When entering login
+
     $('#btnLogin').off('click').on("click", function (e) {
         var allFilled = true;
         $('#frm-login :input:not(:button)').each(function (index, element) {
@@ -75,9 +75,11 @@ alert("#login-pageshow");
     });
 });
 
-$(document).on("pageshow", function () { // When entering login
+$(document).on("pageshow","#landing", function () { // When entering login
 
-
+    setTimeout(function(){
+        $(".owl-carousel").owlCarousel({items:3,margin:5,nav:false,dots:true,autoplay:true,autoplayTimeout:2000,loop:true});
+    },1000)
 }); //pageshow
 
 

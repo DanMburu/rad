@@ -53,9 +53,7 @@ app.controller('clientCtrl',['$scope','$http','$filter', function (scope,http,fi
             scope.locations = data['locations'];
 
             hideLoader();
-            setTimeout(function(){
-                $(".owl-carousel").owlCarousel({margin:5,nav:false,dots:true,autoplay:true,autoplayTimeout:2000,loop:true});
-            },1000)
+
 
         });
     };
