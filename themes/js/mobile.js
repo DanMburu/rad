@@ -233,8 +233,13 @@ $(document).on("pageshow",'#decoyLanding', function() { // login
     if (firstrun === null || firstrun==='null') {
 
        // $.mobile.changePage('#login-page', {type: "get", transition: "slide"});
-  $('.lnkToLoginPage').trigger('click');
-        setTimeout(function () {populateDB();}, 2000);
+
+        setTimeout(function () {
+            $('.lnkToLoginPage').trigger('click');
+        }, 1000);
+        setTimeout(function () {
+            populateDB();
+        }, 2000);
     }
     else {
         alert('#landing');
