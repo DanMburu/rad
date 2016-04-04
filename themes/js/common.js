@@ -96,16 +96,17 @@ $(document).on("pageshow", "#forgot-password", function () {
     };
     showLoader();
     $.ajax(options).success(function (data) {
+        hideLoader();
         if (data.trim().toLowerCase() === 'success') {
             $.dynamic_popup('<span>New password sent to your email.</span>');
-            $('#frm-enquiry')[0].reset();
+
         }else if(data.trim() === 'notFound'){
             $.dynamic_popup('<span class="error">Email address not registered.</span>');
         }else if(data.trim() === 'fail'){
             $.dynamic_popup('<span class="error">Sorry we haven\'t managed to reset your password\nKindly try again or Contact us .</span>');
         }
 
-        hideLoader();
+
     }).error(ajaxError).always(ajaxAlways);
 
 });
