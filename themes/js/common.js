@@ -21,7 +21,7 @@ var ajaxError = function (object) {
     hideLoader();
 };
 
-$(document).on("pageshow", "#login", function () { // When entering login
+$(document).on("pageshow", "#login-page", function () { // When entering login
 alert("#login-pageshow");
     $('#btnLogin').off('click').on("click", function (e) {
         var allFilled = true;

@@ -225,16 +225,16 @@ $(document).on("pageshow", function() { // login
 
 });
 $(document).on("pageshow",'#decoyLanding', function() { // login
-    alert('decoyLanding');
+
 
     showLoader();
     var firstrun = window.localStorage.getItem("runned");
-    alert(firstrun);
-    if (firstrun === null || firstrun==='null') {
-        alert('#login');
-        $.mobile.changePage('#login', {type: "get", transition: "slide"});
 
-       // setTimeout(function () {populateDB();}, 2000);
+    if (firstrun === null || firstrun==='null') {
+
+       // $.mobile.changePage('#login-page', {type: "get", transition: "slide"});
+  $('.lnkToLoginPage').trigger('click');
+        setTimeout(function () {populateDB();}, 2000);
     }
     else {
         alert('#landing');
