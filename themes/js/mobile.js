@@ -242,9 +242,9 @@ $(document).on("pageshow",'#decoyLanding', function() { // login
         }, 2000);
     }
     else {
-        alert('#landing');
+        setTimeout(function () {
             $.mobile.changePage( '#landing', {type: "get", transition: "slide"});
-
+        }, 1000);
     }
 });
 function landing(){
